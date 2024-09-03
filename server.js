@@ -21,7 +21,7 @@ app.use("/task", taskRoutes);
 const conn = async () => {
     try {
         console.log(process.env.JWT_SECRET, "tokkkk");
-        await mongoose.connect("mongodb+srv://hannu:hannuman@cluster0.c7ilr.mongodb.net/", {
+        await mongoose.connect(process.env.MONGO_URL, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
