@@ -10,7 +10,7 @@ const app = express();
 
 app.use(cors({
     credentials: true,
-    origin: "http://localhost:5173"
+    origin: process.env.Fontened
 }));
 app.use(express.json());
 
@@ -43,5 +43,5 @@ app.use((err, req, res, next) => {
 
 app.listen(4000, () => {
     conn();
-    console.log("Server running on http://localhost:4000");
+    console.log("Server running on",process.env.BASE_URL);
 });
