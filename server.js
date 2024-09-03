@@ -10,7 +10,7 @@ const app = express();
 
 app.use(cors({
     credentials: true,
-    origin: process.env.Fontened
+    origin: process.env.Fontend_URL
 }));
 app.use(express.json());
 
